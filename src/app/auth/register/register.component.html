@@ -1,0 +1,74 @@
+<div id="login" class="auth-form">
+  <div>
+    <h1 class="fs-2 fw-bold text-center mb-3 text-main">
+      Register Now
+    </h1>
+  </div>
+  <form [formGroup]="registerForm" (ngSubmit)="loginNow()" class="pt-sm-4 pt-2">
+    <div class="mb-3">
+      <label for="name" class="mb-2">Name</label>
+      <input id="name" class="form-control" type="text" placeholder="Enter name" formControlName="name" />
+      <ng-container *ngIf="formControls?.name?.invalid && (formControls?.name?.dirty || formControls?.name?.touched)">
+        <div class="mt-1">
+          <ng-container *ngIf="formControls?.name?.errors?.required">
+            <span class="text-danger fs-8">
+              Name is required
+            </span>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="mb-2">Phone</label>
+      <input id="phone" class="form-control" type="number" placeholder="Enter phone" formControlName="phone" />
+      <ng-container
+        *ngIf="formControls?.phone?.invalid && (formControls?.phone?.dirty || formControls?.phone?.touched)">
+        <div class="mt-1">
+          <ng-container *ngIf="formControls?.phone?.errors?.required">
+            <span class="text-danger fs-8">
+              Phone is required
+            </span>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="mb-2">Email Address</label>
+      <input id="email" class="form-control" type="email" placeholder="Enter email" formControlName="email" />
+      <ng-container
+        *ngIf="formControls?.email?.invalid && (formControls?.email?.dirty || formControls?.email?.touched)">
+        <div class="mt-1">
+          <ng-container *ngIf="formControls?.email?.errors?.required">
+            <span class="text-danger fs-8">
+              Email is required
+            </span>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+    <div class="mb-2">
+      <label for="password" class="mb-2">Password</label>
+      <input id="password" class="form-control" type="password" placeholder="Enter password"
+        formControlName="password" />
+      <ng-container
+        *ngIf="formControls?.password?.invalid && (formControls?.password?.dirty || formControls?.password?.touched) ">
+        <div class="mt-1">
+          <ng-container *ngIf="formControls?.password?.errors?.['required']">
+            <span class="text-danger fs-8">
+              Password is required
+            </span>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+    <button type="submit" class="btn w-100 btn-solid-main mt-4 fs-6" [disabled]="registerForm.invalid">
+      Register
+    </button>
+
+    <div class="mt-4 fs-6" *ngIf="showError">
+      <p class="mb-0 text-center alert alert-danger text-danger">
+        {{' Incorrect Email or Password'}}
+      </p>
+    </div>
+  </form>
+</div>

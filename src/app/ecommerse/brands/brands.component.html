@@ -1,0 +1,14 @@
+<div class="brands py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-xl-3 col-md-4 col-sm-6" *ngFor="let item of brands">
+        <div class="brand-card overflow-hidden">
+          <div class="brand-img">
+            <img class="w-100" [src]="item?.image" alt="brand">
+          </div>
+          <!-- <h5 class="mb-0 text-center mt-3">{{item?.name}}</h5> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

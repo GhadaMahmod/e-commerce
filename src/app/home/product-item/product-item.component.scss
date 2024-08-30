@@ -1,0 +1,46 @@
+.product-card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  .recipe-img {
+    height: 14rem;
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s ease-in-out;
+    }
+    &:hover {
+      img {
+        transition: all 0.4s ease-in-out;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .recipe-info {
+    .description {
+      color: #949494;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: 0.95rem;
+      height: 2.4rem;
+    }
+    .ingridiants {
+      color: #949494;
+    }
+    .num {
+      width: 1.3rem;
+      min-width: 1.3rem;
+      height: 1.3rem;
+      background-color: var(--bg-main);
+      font-size: 0.8rem;
+    }
+  }
+}
+.btn {
+  height: 2.3rem;
+}

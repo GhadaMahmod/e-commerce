@@ -1,0 +1,22 @@
+#login {
+  .form-logo {
+    width: 3rem;
+  }
+  .form-btn {
+    background-color: var(--bg-main);
+    border-color: var(--bg-main);
+    color: var(--text-white-color);
+    height: 3.7rem;
+    border-radius: var(--border-input-radius);
+  }
+  .permission {
+    color: #565656;
+  }
+}
+@media (max-width: 587px) {
+  #login {
+    .fs-2 {
+      font-size: 1.3rem !important;
+    }
+  }
+}
